@@ -8,7 +8,7 @@ if(!$pdo) die("A Conexao com o banco falhou");
 echo"<h3>Lista de usuários</h3><br>";
 
 $identificador = 2;
-$sql = "SELECT * FROM usuarios";
+$sql = "SELECT * FROM usuarios where id = id";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
     "id"=> $identificador,
